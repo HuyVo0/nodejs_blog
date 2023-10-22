@@ -1,0 +1,49 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful":"lint-staged",
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass --watch src/resources/scss/app.scss src/public/css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuyVo0/nodejs_blog.git"
+  },
+  "keywords": [
+    "node",
+    "blog",
+    "blog",
+    "nodejs",
+    "blog"
+  ],
+  "author": "vh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuyVo0/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/HuyVo0/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"lint-staged"
+    }
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.3"
+  }
+}
